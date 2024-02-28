@@ -1,0 +1,94 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+namespace CasinoApp_SCRUM
+{
+    /// <summary>
+    /// Interaction logic for SlotMachine.xaml
+    /// </summary>
+    public partial class SlotMachine : Window
+    {
+        public SlotMachine()
+        {
+            InitializeComponent();
+        }
+
+        public void rollSlots(object sender, RoutedEventArgs e)
+        {
+            List<int> ints = new List<int>() {4,4,4,4,3,3,3,2,2,1}; // 4-cherry 3-bell 2-bar 1-sevens
+            Random rnd = new Random();
+            int firstSlot = ints[rnd.Next(10)];
+            int secondSlot = ints[rnd.Next(10)];
+            int thirdSlot = ints[rnd.Next(10)];
+            
+
+            switch (ints[firstSlot])
+            {
+                case 4:
+                    slot1.Source = new BitmapImage(new Uri("Resources/AngyCantera.png", UriKind.Relative));
+                    break;
+                case 3:
+                    slot1.Source = new BitmapImage(new Uri("Resources/AngyCantera.png", UriKind.Relative));
+                    break;
+                case 2:
+                    slot1.Source = new BitmapImage(new Uri("Resources/AngyCantera.png", UriKind.Relative));
+                    break;
+                case 1:
+                    slot1.Source = new BitmapImage(new Uri("Resources/7.jpg", UriKind.Relative));
+                    break;
+
+            }
+
+            switch (ints[secondSlot])
+            {
+                case 4:
+                    slot2.Source = new BitmapImage(new Uri("Resources/AngyCantera.png", UriKind.Relative));
+                    break;
+                case 3:
+                    slot2.Source = new BitmapImage(new Uri("Resources/AngyCantera.png", UriKind.Relative));
+                    break;
+                case 2:
+                    slot2.Source = new BitmapImage(new Uri("Resources/AngyCantera.png", UriKind.Relative));
+                    break;
+                case 1:
+                    slot2.Source = new BitmapImage(new Uri("Resources/7.jpg", UriKind.Relative));
+                    break;
+
+            }
+
+            switch (ints[thirdSlot])
+            {
+                case 4:
+                    slot3.Source = new BitmapImage(new Uri("Resources/AngyCantera.png", UriKind.Relative));
+                    break;
+                case 3:
+                    slot3.Source = new BitmapImage(new Uri("Resources/AngyCantera.png", UriKind.Relative));
+                    break;
+                case 2:
+                    slot3.Source = new BitmapImage(new Uri("Resources/AngyCantera.png", UriKind.Relative));
+                    break;
+                case 1:
+                    slot3.Source = new BitmapImage(new Uri("Resources/AngyCantera.png", UriKind.Relative));
+                    break;
+
+            }
+
+            if (firstSlot == secondSlot && firstSlot == thirdSlot)
+            {
+
+            }
+        }
+
+    }
+}
