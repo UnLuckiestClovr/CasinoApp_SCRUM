@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CasinoApp_SCRUM"
         mc:Ignorable="d"
-        Title="SlotMachine" Height="450" Width="800">
+        Title="SlotMachine" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Resources/Slots2.jpg"/>

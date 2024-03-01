@@ -10,7 +10,7 @@ namespace CasinoApp_SCRUM
     {
         public static UserInfo gUserInfo = new UserInfo();
 
-        public static SlotMachine gSlotMachineWindow;
-        public static MainWindow gCansinoMenu;
+        public static SlotMachine gSlotMachineWindow = new SlotMachine();
+        public static MainWindow gMainMenu = new MainWindow();
     }
 }

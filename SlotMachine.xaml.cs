@@ -131,8 +131,13 @@ namespace CasinoApp_SCRUM
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            GlobalData.gCansinoMenu.Show();
+            GlobalData.gMainMenu.Show();
             this.Hide();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
