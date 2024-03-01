@@ -8,7 +8,7 @@ namespace CasinoApp_SCRUM
 {
     public class GlobalData
     {
-        public static UserInfo gUserInfo;
+        public static UserInfo gUserInfo = new UserInfo();
 
         public static SlotMachine gSlotMachineWindow;
     }
