@@ -54,6 +54,10 @@ namespace CasinoApp_SCRUM
             this.currentMoney -= money;
         }
 
+        public void addChips(int chips) { this.currentChips += chips;}
+        
+        public void subtractChips(int chips) { this.currentChips -= chips;}
+
 
         // Money Logic | Transferring Chips -> Money or Vice Versa
 
