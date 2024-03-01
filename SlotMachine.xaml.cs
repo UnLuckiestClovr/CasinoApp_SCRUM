@@ -22,14 +22,17 @@ namespace CasinoApp_SCRUM
         public SlotMachine()
         {
             InitializeComponent();
+            lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentChips();
+            feedbackLabel.Content = "Play Slots ($5)";
         }
 
         public void rollSlots(object sender, RoutedEventArgs e)
         {
-            //feedbackLabel.Content = "";
+            feedbackLabel.Content = "You Lose";
             if (GlobalData.gUserInfo.getCurrentChips() >= 5)
             {
                 GlobalData.gUserInfo.subtractChips(5);
+                lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentChips();
                 List<int> ints = new List<int>() { 4, 4, 4, 4, 3, 3, 3, 2, 2, 1 }; // 4-cherry 3-bell 2-bar 1-sevens
                 Random rnd = new Random();
                 int firstSlot = ints[rnd.Next(10)];
@@ -94,28 +97,42 @@ namespace CasinoApp_SCRUM
                     {
                         case 1:
                             // cherry
-                            //feedbackLabel.Content = "You Won $10";
+                            feedbackLabel.Content = "You Won $10";
                             GlobalData.gUserInfo.addChips(10);
+                            lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentChips();
                             break;
                         case 2:
                             // bell
-                            //feedbackLabel.Content = "You Won $20";
+                            feedbackLabel.Content = "You Won $20";
                             GlobalData.gUserInfo.addChips(20);
+                            lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentChips();
                             break;
                         case 3:
                             // cantera
-                            //feedbackLabel.Content = "You Won $40";
+                            feedbackLabel.Content = "You Won $40";
                             GlobalData.gUserInfo.addChips(40);
+                            lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentChips();
                             break;
                         case 4:
                             // 7
-                            //feedbackLabel.Content = "You Won $100";
+                            feedbackLabel.Content = "You Won $100";
                             GlobalData.gUserInfo.addChips(100);
+                            lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentChips();
                             break;
                     }
-                }
+                } 
+                
+            }
+            else
+            {
+                feedbackLabel.Content = "You Don't Have Enough Money To Play";
             }
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalData.gCansinoMenu.Show();
+            this.Hide();
+        }
     }
 }
