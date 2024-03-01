@@ -29,7 +29,7 @@ namespace CasinoApp_SCRUM
         {
             SlotMachine slots = new SlotMachine();
             slots.Show();
-            this.Close();
+            this.Hide();
         }
 
         public void roulBtnClick(object sender, RoutedEventArgs e) 
