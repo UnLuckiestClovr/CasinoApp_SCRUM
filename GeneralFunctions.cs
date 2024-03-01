@@ -54,7 +54,6 @@ namespace CasinoApp_SCRUM
             this.currentMoney -= money;
         }
 
-
         // Money Logic | Transferring Chips -> Money or Vice Versa
 
         public void buyChips(int value) // Switch out Money for Chips at values of $1, $5, $10, $50, and $100 ; Intakes the wanted Amount

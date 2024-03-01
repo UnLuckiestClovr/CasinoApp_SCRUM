@@ -88,18 +88,22 @@ namespace CasinoApp_SCRUM
 
             if (firstSlot == secondSlot && firstSlot == thirdSlot)
             {
-                switch (firstSlot)
-                {
+                switch (firstSlot) 
+                { // add money on win
                     case 4:
-                        // add money
+                        // cherry
+
                         break;
                     case 3:
+                        // bell
 
                         break;
                     case 2:
+                        // cantera
 
                         break;
                     case 1:
+                        // 7
 
                         break;
                 }
