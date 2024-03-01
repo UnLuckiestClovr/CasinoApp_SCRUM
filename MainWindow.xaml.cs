@@ -20,5 +20,23 @@ namespace CasinoApp_SCRUM
         {
             InitializeComponent();
         }
+        public void exchangeBtnClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        public void slotBtnClick(object sender, RoutedEventArgs e) 
+        {
+            SlotMachine slots = new SlotMachine();
+            slots.Show();
+            this.Hide();
+        }
+
+        public void roulBtnClick(object sender, RoutedEventArgs e) 
+        {
+        
+        }
+
+
     }
 }

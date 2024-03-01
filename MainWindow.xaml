@@ -6,7 +6,39 @@
         xmlns:local="clr-namespace:CasinoApp_SCRUM"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
 
-    </Grid>
+    <Border VerticalAlignment="Center" HorizontalAlignment="Center" BorderBrush="#3b3b3b" BorderThickness="10" >
+        <Grid x:Name="ParentGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Width="780" Height="414" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="53*" />
+                <RowDefinition Height="361*" />
+            </Grid.RowDefinitions>
+
+            <Border Background="#205072">
+                <Label x:Name="PageTitle" Content="CASINO" HorizontalAlignment="Center" FontFamily="Times New Roman" FontSize="30" Foreground="GhostWhite" />
+            </Border>
+
+            <Border Grid.Row="1" Background="DimGray">
+                <Grid x:Name="MainMenuGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Button Grid.Column="0" Grid.Row="1" Name="exchangeBtn" Content="Exchange $" Click="exchangeBtnClick" Width="130" Height="60" Background="#205072" Foreground="GhostWhite"/>
+                    <Button Grid.Column="1" Grid.Row="1" Name="slotBtn" Click="slotBtnClick" Content="Play Slots" Width="130" Height="60" Background="#205072" Foreground="GhostWhite"/>
+                    <Button Grid.Column="2" Grid.Row="1" Name="roulBtn" Click="roulBtnClick" Content="Play Roulette" Width="130" Height="60" Background="#205072" Foreground="GhostWhite"/>
+                </Grid>
+            </Border>
+
+        </Grid>
+    </Border>
 </Window>
