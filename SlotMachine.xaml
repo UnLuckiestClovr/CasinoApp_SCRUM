@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CasinoApp_SCRUM"
         mc:Ignorable="d"
-        Title="SlotMachine" Height="450" Width="800">
+        Title="SlotMachine" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Resources/Slots2.jpg"/>
@@ -35,8 +35,8 @@
         <Image Name="slot1" Grid.Column="1" Grid.Row="2" Source="Resources/7.jpg" Grid.RowSpan="2"></Image>
         <Image Name="slot2" Grid.Column="3" Grid.Row="2" Source="Resources/7.jpg" Grid.RowSpan="2"></Image>
         <Image Name="slot3" Grid.Column="5" Grid.Row="2" Source="Resources/7.jpg" Grid.RowSpan="2"></Image>
-        <Button Width="100" Height="80" Background="CadetBlue">Back</Button>
-        <Label Grid.Row="0" Grid.Column="7" Grid.ColumnSpan="2" FontSize="25" VerticalAlignment="Center" FontWeight="Bold"> Money:</Label>
+        <Button Width="100" Height="80" Background="CadetBlue" Click="Button_Click">Back</Button>
+        <Label Grid.Row="0" Grid.Column="7" Grid.ColumnSpan="2" FontSize="25" VerticalAlignment="Center" FontWeight="Bold" Name="lblMoney"> Money:</Label>
         <Label Name="feedbackLabel" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" Foreground="CornflowerBlue"></Label>
 
 
