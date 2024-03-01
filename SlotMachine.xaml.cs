@@ -26,6 +26,8 @@ namespace CasinoApp_SCRUM
 
         public void rollSlots(object sender, RoutedEventArgs e)
         {
+            //if(money > 5){
+            //money = money - 5
             List<int> ints = new List<int>() {4,4,4,4,3,3,3,2,2,1}; // 4-cherry 3-bell 2-bar 1-sevens
             Random rnd = new Random();
             int firstSlot = ints[rnd.Next(10)];
@@ -33,13 +35,13 @@ namespace CasinoApp_SCRUM
             int thirdSlot = ints[rnd.Next(10)];
             
 
-            switch (ints[firstSlot])
+            switch (firstSlot)
             {
                 case 4:
-                    slot1.Source = new BitmapImage(new Uri("Resources/AngyCantera.png", UriKind.Relative));
+                    slot1.Source = new BitmapImage(new Uri("Resources/cherry.jpg", UriKind.Relative));
                     break;
                 case 3:
-                    slot1.Source = new BitmapImage(new Uri("Resources/AngyCantera.png", UriKind.Relative));
+                    slot1.Source = new BitmapImage(new Uri("Resources/bell.jpg", UriKind.Relative));
                     break;
                 case 2:
                     slot1.Source = new BitmapImage(new Uri("Resources/AngyCantera.png", UriKind.Relative));
@@ -50,13 +52,13 @@ namespace CasinoApp_SCRUM
 
             }
 
-            switch (ints[secondSlot])
+            switch (secondSlot)
             {
                 case 4:
-                    slot2.Source = new BitmapImage(new Uri("Resources/AngyCantera.png", UriKind.Relative));
+                    slot2.Source = new BitmapImage(new Uri("Resources/cherry.jpg", UriKind.Relative));
                     break;
                 case 3:
-                    slot2.Source = new BitmapImage(new Uri("Resources/AngyCantera.png", UriKind.Relative));
+                    slot2.Source = new BitmapImage(new Uri("Resources/bell.jpg", UriKind.Relative));
                     break;
                 case 2:
                     slot2.Source = new BitmapImage(new Uri("Resources/AngyCantera.png", UriKind.Relative));
@@ -67,26 +69,40 @@ namespace CasinoApp_SCRUM
 
             }
 
-            switch (ints[thirdSlot])
+            switch (thirdSlot)
             {
                 case 4:
-                    slot3.Source = new BitmapImage(new Uri("Resources/AngyCantera.png", UriKind.Relative));
+                    slot3.Source = new BitmapImage(new Uri("Resources/cherry.jpg", UriKind.Relative));
                     break;
                 case 3:
-                    slot3.Source = new BitmapImage(new Uri("Resources/AngyCantera.png", UriKind.Relative));
+                    slot3.Source = new BitmapImage(new Uri("Resources/bell.jpg", UriKind.Relative));
                     break;
                 case 2:
                     slot3.Source = new BitmapImage(new Uri("Resources/AngyCantera.png", UriKind.Relative));
                     break;
                 case 1:
-                    slot3.Source = new BitmapImage(new Uri("Resources/AngyCantera.png", UriKind.Relative));
+                    slot3.Source = new BitmapImage(new Uri("Resources/7.jpg", UriKind.Relative));
                     break;
 
             }
 
             if (firstSlot == secondSlot && firstSlot == thirdSlot)
             {
+                switch (firstSlot)
+                {
+                    case 4:
+                        // add money
+                        break;
+                    case 3:
 
+                        break;
+                    case 2:
+
+                        break;
+                    case 1:
+
+                        break;
+                }
             }
         }
 
