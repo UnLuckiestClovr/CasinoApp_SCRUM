@@ -42,6 +42,19 @@ namespace CasinoApp_SCRUM
         public void setCurrentChips(int chips) { this.currentChips = chips;}
 
 
+        // Money Logic | Math
+
+        public void addMoney(float money)
+        {
+            this.currentMoney += money;
+        }
+
+        public void subtractMoney(float money)
+        {
+            this.currentMoney -= money;
+        }
+
+
         // Money Logic | Transferring Chips -> Money or Vice Versa
 
         public void buyChips(int value) // Switch out Money for Chips at values of $1, $5, $10, $50, and $100 ; Intakes the wanted Amount
