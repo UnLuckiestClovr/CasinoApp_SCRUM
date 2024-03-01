@@ -26,6 +26,7 @@ namespace CasinoApp_SCRUM
 
         public void rollSlots(object sender, RoutedEventArgs e)
         {
+            feedbackLabel.Content = "";
             //if(money > 5){
             //money = money - 5
             List<int> ints = new List<int>() {4,4,4,4,3,3,3,2,2,1}; // 4-cherry 3-bell 2-bar 1-sevens
@@ -92,15 +93,16 @@ namespace CasinoApp_SCRUM
                 {
                     case 4:
                         // add money
+                        feedbackLabel.Content = "You Won $10";
                         break;
                     case 3:
-
+                        feedbackLabel.Content = "You Won $20";
                         break;
                     case 2:
-
+                        feedbackLabel.Content = "You Won $40";
                         break;
                     case 1:
-
+                        feedbackLabel.Content = "You Won $100";
                         break;
                 }
             }
