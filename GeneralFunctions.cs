@@ -27,8 +27,8 @@ namespace CasinoApp_SCRUM
     public class UserInfo
     {
         private string username;
-        private float currentMoney;
-        private int currentChips;
+        private float currentMoney = 100;
+        private int currentChips = 100;
 
         // Getters / Setters
 
