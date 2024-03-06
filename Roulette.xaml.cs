@@ -59,11 +59,18 @@ namespace CasinoApp_SCRUM
             return colorArray[genFunctions.returnRandInt(0, 1)];
         }
 
-        // Bet Logic
+        // Bet Logic ---------------------------------------
 
         private int betAmount = 0;
-        private string betColor;
-        private int betNumber;
+        private string betColor = null;
+        private int betNumber = -1;
+
+        public void resetBets()
+        {
+            betAmount = 0;
+            betColor = null;
+            betNumber = -1;
+        }
 
         public void setBetChips(int amount)
         {
@@ -79,6 +86,16 @@ namespace CasinoApp_SCRUM
         public bool spinWheel()
         {
             if (betAmount == 0) { return false; }
+
+            if (betNumber == -1 && betColor != null)
+            {
+                return betColor.Equals(spinWheel_Color());
+            }
+            else if (betNumber != -1 && betColor == null)
+            {
+                return betNumber.Equals(spinWheel_Number());
+            }
+            else { return false; }
         }
     }
 }
