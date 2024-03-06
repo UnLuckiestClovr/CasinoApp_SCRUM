@@ -35,7 +35,13 @@ namespace CasinoApp_SCRUM
 
         private void spinRouletteBTN_Click(object sender, RoutedEventArgs e)
         {
+            int winnings = rb.spinWheel();
 
+            GlobalData.gUserInfo.addChips(winnings);
+
+            // if (winnings > 0) {  }
+
+            rb.resetBets();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
