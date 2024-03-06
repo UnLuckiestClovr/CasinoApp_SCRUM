@@ -120,6 +120,7 @@ namespace CasinoApp_SCRUM
                             lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentChips();
                             break;
                     }
+                    lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentMoney();
                 } 
                 
             }
