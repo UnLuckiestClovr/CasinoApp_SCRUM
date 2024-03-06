@@ -19,9 +19,12 @@ namespace CasinoApp_SCRUM
     /// </summary>
     public partial class Roulette : Window
     {
+
+        RouletteBoard rb = new RouletteBoard();
         public Roulette()
         {
             InitializeComponent();
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -37,7 +40,17 @@ namespace CasinoApp_SCRUM
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            //betNumber = sender.content
+            if ((sender as Button).Content.ToString().Equals("RED"))
+            {
+                rb.setBet_Values(-1, "RED");
+            }else if ((sender as Button).Content.ToString().Equals("BLACK"))
+            {
+                rb.setBet_Values(-1, "BLACK");
+            }
+            else
+            {
+                rb.setBet_Values(int.Parse((sender as Button).Content.ToString()),null);
+            }
         }
     }
 
@@ -76,7 +89,15 @@ namespace CasinoApp_SCRUM
         {
             this.betAmount = amount;
         }
-
+        
+        public void setBetNumber(int betnumber)
+        {
+            this.betNumber = betnumber;
+        }
+        public void setBetColor(string betcolor)
+        {
+            this.betColor = betcolor;
+        }
         public void setBet_Values(int number, string color)
         {
             this.betNumber = number;
