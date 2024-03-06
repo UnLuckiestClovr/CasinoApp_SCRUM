@@ -78,19 +78,35 @@ namespace CasinoApp_SCRUM
             this.betColor = color;
         }
 
-        public bool spinWheel()
+        public int spinWheel()
         {
-            if (betAmount == 0) { return false; }
+            if (betAmount == 0) { return 0; }
 
-            if (betNumber == -1 && betColor != null)
+            if (betNumber == 0) 
             {
-                return betColor.Equals(spinWheel_Color());
+                if (betNumber.Equals(spinWheel_Number()))
+                {
+                    return (int)(betAmount * 3);
+                }
+                else return 0;
+            }
+            else if (betNumber == -1 && betColor != null)
+            {
+                if (betColor.Equals(spinWheel_Color()))
+                {
+                    return (int)(betAmount * 1.5);
+                }
+                else return 0;
             }
             else if (betNumber != -1 && betColor == null)
             {
-                return betNumber.Equals(spinWheel_Number());
+                if (betNumber.Equals(spinWheel_Number()))
+                {
+                    return (int)(betAmount * 2);
+                }
+                else return 0;
             }
-            else { return false; }
+            else { return 0; }
         }
     }
 }
