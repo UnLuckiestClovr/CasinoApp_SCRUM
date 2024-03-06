@@ -13,5 +13,6 @@ namespace CasinoApp_SCRUM
         public static SlotMachine gSlotMachineWindow = new SlotMachine();
         public static MainWindow gMainMenu = new MainWindow();
         public static Roulette rouletteWindow = new Roulette();
+        public static ChipExchange gChipExchangeWindow = new ChipExchange();
     }
 }
