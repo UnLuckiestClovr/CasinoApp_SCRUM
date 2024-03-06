@@ -29,5 +29,51 @@ namespace CasinoApp_SCRUM
             GlobalData.gMainMenu.Show();
             this.Hide();
         }
+
+        private void spinRouletteBTN_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+    }
+
+    public class RouletteBoard
+    {
+        public GeneralFunctions genFunctions = new GeneralFunctions();
+
+        private string[] colorArray = { "Red", "Black" };
+
+        public string getColor(int num) { return colorArray[num]; }
+        
+        public int spinWheel_Number()
+        {
+            return genFunctions.returnRandInt(0, 37);
+        }
+
+        public string spinWheel_Color()
+        {
+            return colorArray[genFunctions.returnRandInt(0, 1)];
+        }
+
+        // Bet Logic
+
+        private int betAmount = 0;
+        private string betColor;
+        private int betNumber;
+
+        public void setBetChips(int amount)
+        {
+            this.betAmount = amount;
+        }
+
+        public void setBet_Values(int number, string color)
+        {
+            this.betNumber = number;
+            this.betColor = color;
+        }
+
+        public bool spinWheel()
+        {
+            if (betAmount == 0) { return false; }
+        }
     }
 }
