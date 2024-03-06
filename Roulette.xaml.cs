@@ -114,31 +114,34 @@ namespace CasinoApp_SCRUM
         {
             if (betAmount == 0) { return 0; }
 
+            int rolled = spinWheel_Number();
+
             if (betNumber == 0) 
             {
-                if (betNumber.Equals(spinWheel_Number()))
+                if (betNumber.Equals(rolled))
                 {
                     return (int)(betAmount * 3);
                 }
-                else return 0;
+                else return rolled;
             }
             else if (betNumber == -1 && betColor != null)
             {
-                if (betColor.Equals(spinWheel_Color()))
+                if (betColor.Equals(rolled))
                 {
                     return (int)(betAmount * 1.5);
                 }
-                else return 0;
+                else return rolled;
             }
             else if (betNumber != -1 && betColor == null)
             {
-                if (betNumber.Equals(spinWheel_Number()))
+                if (betNumber.Equals(rolled))
                 {
                     return (int)(betAmount * 2);
                 }
-                else return 0;
+                else return rolled;
             }
-            else { return 0; }
+            else { return rolled; }
+
         }
     }
 }
