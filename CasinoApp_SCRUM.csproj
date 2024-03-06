@@ -14,6 +14,7 @@
     <None Remove="Resources\bell.jpg" />
     <None Remove="Resources\cherry.jpg" />
     <None Remove="Resources\rolling.gif" />
+    <None Remove="Resources\roulette-table-png.png" />
     <None Remove="Resources\Slots2.jpg" />
   </ItemGroup>
 
@@ -23,6 +24,7 @@
     <Resource Include="Resources\bell.jpg" />
     <Resource Include="Resources\cherry.jpg" />
     <Resource Include="Resources\rolling.gif" />
+    <Resource Include="Resources\roulette-table-png.png" />
     <Resource Include="Resources\Slots2.jpg" />
   </ItemGroup>
 
