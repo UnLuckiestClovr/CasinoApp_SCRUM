@@ -45,7 +45,7 @@ namespace CasinoApp_SCRUM
     {
         public GeneralFunctions genFunctions = new GeneralFunctions();
 
-        private string[] colorArray = { "Red", "Black" };
+        private string[] colorArray = { "RED", "BLACK" };
 
         public string getColor(int num) { return colorArray[num]; }
         
