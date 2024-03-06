@@ -22,7 +22,8 @@ namespace CasinoApp_SCRUM
         }
         public void exchangeBtnClick(object sender, RoutedEventArgs e)
         {
-
+            this.Hide();
+            GlobalData.gChipExchangeWindow.Show();
         }
 
         public void slotBtnClick(object sender, RoutedEventArgs e) 
