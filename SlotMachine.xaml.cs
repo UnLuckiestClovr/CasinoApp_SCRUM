@@ -99,25 +99,25 @@ namespace CasinoApp_SCRUM
                             // cherry
                             feedbackLabel.Content = "You Won $10";
                             GlobalData.gUserInfo.addMoney(10);
-                            lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentChips();
+                            lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentMoney();
                             break;
                         case 2:
                             // bell
                             feedbackLabel.Content = "You Won $20";
                             GlobalData.gUserInfo.addMoney(20);
-                            lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentChips();
+                            lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentMoney();
                             break;
                         case 3:
                             // cantera
                             feedbackLabel.Content = "You Won $40";
                             GlobalData.gUserInfo.addMoney(40);
-                            lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentChips();
+                            lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentMoney();
                             break;
                         case 4:
                             // 7
                             feedbackLabel.Content = "You Won $100";
                             GlobalData.gUserInfo.addMoney(100);
-                            lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentChips();
+                            lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentMoney();
                             break;
                     }
                 } 
