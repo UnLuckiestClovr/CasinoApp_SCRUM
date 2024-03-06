@@ -22,17 +22,17 @@ namespace CasinoApp_SCRUM
         public SlotMachine()
         {
             InitializeComponent();
-            lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentChips();
+            lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentMoney();
             feedbackLabel.Content = "Play Slots ($5)";
         }
 
         public void rollSlots(object sender, RoutedEventArgs e)
         {
             feedbackLabel.Content = "You Lose";
-            if (GlobalData.gUserInfo.getCurrentChips() >= 5)
+            if (GlobalData.gUserInfo.getCurrentMoney() >= 5)
             {
-                GlobalData.gUserInfo.subtractChips(5);
-                lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentChips();
+                GlobalData.gUserInfo.subtractMoney(5);
+                lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentMoney();
                 List<int> ints = new List<int>() { 4, 4, 4, 4, 3, 3, 3, 2, 2, 1 }; // 4-cherry 3-bell 2-bar 1-sevens
                 Random rnd = new Random();
                 int firstSlot = ints[rnd.Next(10)];
@@ -98,28 +98,29 @@ namespace CasinoApp_SCRUM
                         case 1:
                             // cherry
                             feedbackLabel.Content = "You Won $10";
-                            GlobalData.gUserInfo.addChips(10);
+                            GlobalData.gUserInfo.addMoney(10);
                             lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentChips();
                             break;
                         case 2:
                             // bell
                             feedbackLabel.Content = "You Won $20";
-                            GlobalData.gUserInfo.addChips(20);
+                            GlobalData.gUserInfo.addMoney(20);
                             lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentChips();
                             break;
                         case 3:
                             // cantera
                             feedbackLabel.Content = "You Won $40";
-                            GlobalData.gUserInfo.addChips(40);
+                            GlobalData.gUserInfo.addMoney(40);
                             lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentChips();
                             break;
                         case 4:
                             // 7
                             feedbackLabel.Content = "You Won $100";
-                            GlobalData.gUserInfo.addChips(100);
+                            GlobalData.gUserInfo.addMoney(100);
                             lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentChips();
                             break;
                     }
+                    lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentMoney();
                 } 
                 
             }
