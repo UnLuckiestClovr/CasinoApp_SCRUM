@@ -106,8 +106,8 @@
             <Button Background="Black" Foreground="white" Content="37" FontSize="20" Grid.Row="2" Grid.Column="10" Click="Button_Click_1"></Button>
             <Button Background="#95ed61" Foreground="Black" Content="0" FontSize="20" Grid.Row="3" Grid.Column="6" Click="Button_Click_1" Grid.ColumnSpan="3"></Button>
 
-            <Button Background="Black" Foreground="white" Content="Black" FontSize="40" Grid.Row="2" Grid.Column="0" Click="Button_Click_1" Grid.RowSpan="2" Grid.ColumnSpan="3"></Button>
-            <Button Background="Red" Foreground="white" Content="Red" FontSize="40" Grid.Row="2" Grid.Column="12" Click="Button_Click_1" Grid.RowSpan="2" Grid.ColumnSpan="3"></Button>
+            <Button Background="Black" Foreground="white" Content="BLACK" FontSize="40" Grid.Row="2" Grid.Column="0" Click="Button_Click_1" Grid.RowSpan="2" Grid.ColumnSpan="3"></Button>
+            <Button Background="Red" Foreground="white" Content="RED" FontSize="40" Grid.Row="2" Grid.Column="12" Click="Button_Click_1" Grid.RowSpan="2" Grid.ColumnSpan="3"></Button>
 
         </Grid>
         
