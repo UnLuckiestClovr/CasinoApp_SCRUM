@@ -35,7 +35,9 @@ namespace CasinoApp_SCRUM
 
         public void roulBtnClick(object sender, RoutedEventArgs e) 
         {   
-            
+            Roulette roulette = new Roulette();
+            roulette.Show();
+            this.Hide();
         }
 
 
