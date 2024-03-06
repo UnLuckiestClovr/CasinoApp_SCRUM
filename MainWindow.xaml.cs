@@ -33,8 +33,8 @@ namespace CasinoApp_SCRUM
         }
 
         public void roulBtnClick(object sender, RoutedEventArgs e) 
-        {
-        
+        {   
+            
         }
 
 
