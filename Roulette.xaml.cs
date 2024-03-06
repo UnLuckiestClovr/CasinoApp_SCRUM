@@ -39,7 +39,7 @@ namespace CasinoApp_SCRUM
 
             GlobalData.gUserInfo.addChips(winnings);
 
-            // if (winnings > 0) {  }
+            feedback.Content = "It rolled a " + rb.spinWheel();
 
             rb.resetBets();
         }
