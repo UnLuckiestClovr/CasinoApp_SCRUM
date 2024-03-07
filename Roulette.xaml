@@ -23,7 +23,7 @@
 
         <Button Background="CadetBlue" Click="Button_Click" Margin="25,45,24,45">Back</Button>
 
-        <Label Grid.Column="2" Margin="10,10,10,10" Content="Chips:"/>
+        <Label Name="chipLabel" Grid.Column="2" Margin="10,10,10,10" Content="Chips:"/>
 
         <WrapPanel Grid.RowSpan="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="502" Width="502">
             <Image Source="/Resources/roulette-table-png.png" ></Image>

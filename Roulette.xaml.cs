@@ -24,6 +24,7 @@ namespace CasinoApp_SCRUM
         public Roulette()
         {
             InitializeComponent();
+            chipLabel.Content = (GlobalData.gUserInfo.getCurrentChips() + "");
             
         }
 
@@ -36,6 +37,8 @@ namespace CasinoApp_SCRUM
         private void spinRouletteBTN_Click(object sender, RoutedEventArgs e)
         {
             feedback.Content =  "It rolled a " + rb.spinWheel();
+
+            chipLabel.Content = (GlobalData.gUserInfo.getCurrentChips() + "");
 
         }
 
