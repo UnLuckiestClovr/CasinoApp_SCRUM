@@ -36,8 +36,13 @@ namespace CasinoApp_SCRUM
 
         private void spinRouletteBTN_Click(object sender, RoutedEventArgs e)
         {
-            feedback.Content =  "It rolled a " + rb.spinWheel();
+            int winnings = rb.spinWheel();
 
+            GlobalData.gUserInfo.addChips(winnings);
+
+            feedback.Content = "It rolled a " + rb.spinWheel();
+
+            rb.resetBets();
             chipLabel.Content = (GlobalData.gUserInfo.getCurrentChips() + "");
 
         }
