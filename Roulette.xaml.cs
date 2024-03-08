@@ -61,6 +61,14 @@ namespace CasinoApp_SCRUM
                 rb.setBet_Values(int.Parse((sender as Button).Content.ToString()),null);
             }
         }
+
+        private void betButtonClick(object sender, RoutedEventArgs e)
+        {
+            if (int.Parse((sender as Button).Content.ToString()) + rb.getBetNumber() < GlobalData.gUserInfo.getCurrentChips())
+            {
+                rb.setBetNumber(rb.getBetNumber() + int.Parse((sender as Button).Content.ToString()));
+            }
+        }
     }
 
     public class RouletteBoard
@@ -102,6 +110,11 @@ namespace CasinoApp_SCRUM
         public void setBetNumber(int betnumber)
         {
             this.betNumber = betnumber;
+        }
+
+        public int getBetNumber()
+        {
+            return this.betNumber;
         }
         public void setBetColor(string betcolor)
         {
