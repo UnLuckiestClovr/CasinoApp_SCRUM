@@ -26,6 +26,12 @@ namespace CasinoApp_SCRUM
             lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentMoney();
         }
 
+        public void chageValue(float money, int chips)
+        {
+            lblMoney.Content = "Money: " + money;
+            lblChips.Content = "Chips: " + chips;
+        }
+
         private void btnReturn_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
