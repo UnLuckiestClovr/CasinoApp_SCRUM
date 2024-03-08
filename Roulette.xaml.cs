@@ -50,6 +50,8 @@ namespace CasinoApp_SCRUM
             rb.resetBets();
             chipLabel.Content = (GlobalData.gUserInfo.getCurrentChips() + "");
 
+            
+
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -119,7 +121,7 @@ namespace CasinoApp_SCRUM
         
         public int spinWheel_Number()
         {
-            return genFunctions.returnRandInt(0, 37);
+            return genFunctions.returnRandInt(0, 2); // -----------------
         }
 
         public string spinWheel_Color()
