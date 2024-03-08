@@ -19,6 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Resources\7.jpg" />
     <Resource Include="Resources\AngyCantera.png" />
     <Resource Include="Resources\bell.jpg" />

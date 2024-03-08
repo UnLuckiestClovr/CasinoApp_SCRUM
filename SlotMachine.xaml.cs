@@ -9,8 +9,10 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfAnimatedGif;
 
 namespace CasinoApp_SCRUM
 {
@@ -26,11 +28,47 @@ namespace CasinoApp_SCRUM
             feedbackLabel.Content = "Play Slots ($5)";
         }
 
-        public void rollSlots(object sender, RoutedEventArgs e)
+        public async void rollSlots(object sender, RoutedEventArgs e)
         {
-            feedbackLabel.Content = "You Lose";
+            int slotvar1 = 0;
+            int slotvar2 = 0;
+            int slotvar3 = 0;
+
+            var imagespin = new BitmapImage();
+            imagespin.BeginInit();
+            imagespin.UriSource = new Uri("Resources/rolling.gif", UriKind.Relative);
+            imagespin.EndInit();
+
+            var imageCherry = new BitmapImage();
+            imageCherry.BeginInit();
+            imageCherry.UriSource = new Uri("Resources/cherry.jpg", UriKind.Relative);
+            imageCherry.EndInit();
+
+            var imageBell = new BitmapImage();
+            imageBell.BeginInit();
+            imageBell.UriSource = new Uri("Resources/bell.jpg", UriKind.Relative);
+            imageBell.EndInit();
+
+            var imageCant = new BitmapImage();
+            imageCant.BeginInit();
+            imageCant.UriSource = new Uri("Resources/AngyCantera.png", UriKind.Relative);
+            imageCant.EndInit();
+
+            var image7 = new BitmapImage();
+            image7.BeginInit();
+            image7.UriSource = new Uri("Resources/7.jpg", UriKind.Relative);
+            image7.EndInit();
+
+            ImageBehavior.SetAnimatedSource(slot1, imagespin);
+            ImageBehavior.SetAnimatedSource(slot2, imagespin);
+            ImageBehavior.SetAnimatedSource(slot3, imagespin);
+            ImageBehavior.SetRepeatBehavior(slot1, new RepeatBehavior(TimeSpan.FromSeconds(2.5)));
+            ImageBehavior.SetRepeatBehavior(slot2, new RepeatBehavior(TimeSpan.FromSeconds(3)));
+            ImageBehavior.SetRepeatBehavior(slot3, new RepeatBehavior(TimeSpan.FromSeconds(3.5)));
             if (GlobalData.gUserInfo.getCurrentMoney() >= 5)
             {
+             
+
                 GlobalData.gUserInfo.subtractMoney(5);
                 lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentMoney();
                 List<int> ints = new List<int>() { 4, 4, 4, 4, 3, 3, 3, 2, 2, 1 }; // 4-cherry 3-bell 2-bar 1-sevens
@@ -39,58 +77,92 @@ namespace CasinoApp_SCRUM
                 int secondSlot = ints[rnd.Next(10)];
                 int thirdSlot = ints[rnd.Next(10)];
 
-
+                await Task.Delay(2500);
                 switch (firstSlot)
                 {
                     case 4:
-                        slot1.Source = new BitmapImage(new Uri("Resources/cherry.jpg", UriKind.Relative));
+                        slot1.Source = new BitmapImage(new Uri("Resource/cherry.jpg", UriKind.Relative));
+                        ImageBehavior.SetAnimatedSource(slot1, imageCherry);
+                        slotvar1 = 4;
                         break;
                     case 3:
                         slot1.Source = new BitmapImage(new Uri("Resources/bell.jpg", UriKind.Relative));
+                        ImageBehavior.SetAnimatedSource(slot1, imageBell);
+
+                        slotvar1 = 3;
                         break;
                     case 2:
                         slot1.Source = new BitmapImage(new Uri("Resources/AngyCantera.png", UriKind.Relative));
+                        ImageBehavior.SetAnimatedSource(slot1, imageCant);
+
+                        slotvar1 = 2;
                         break;
                     case 1:
-                        slot1.Source = new BitmapImage(new Uri("Resources/7.jpg", UriKind.Relative));
+                        slot1.Source = new BitmapImage(new Uri("Resources/7.png", UriKind.Relative));
+                        ImageBehavior.SetAnimatedSource(slot1, image7);
+
+                        slotvar1 = 1;
                         break;
 
                 }
-
+                await Task.Delay(500);
                 switch (secondSlot)
                 {
                     case 4:
                         slot2.Source = new BitmapImage(new Uri("Resources/cherry.jpg", UriKind.Relative));
+                        ImageBehavior.SetAnimatedSource(slot2, imageCherry);
+
+                        slotvar2 = 4;
                         break;
                     case 3:
                         slot2.Source = new BitmapImage(new Uri("Resources/bell.jpg", UriKind.Relative));
+                        ImageBehavior.SetAnimatedSource(slot2, imageBell);
+
+                        slotvar2 = 3;
                         break;
                     case 2:
                         slot2.Source = new BitmapImage(new Uri("Resources/AngyCantera.png", UriKind.Relative));
+                        ImageBehavior.SetAnimatedSource(slot2, imageCant);
+
+                        slotvar2 = 2;
                         break;
                     case 1:
                         slot2.Source = new BitmapImage(new Uri("Resources/7.jpg", UriKind.Relative));
+                        ImageBehavior.SetAnimatedSource(slot2, image7);
+
+                        slotvar2 = 1;
                         break;
 
                 }
-
+                await Task.Delay(500);
                 switch (thirdSlot)
                 {
                     case 4:
                         slot3.Source = new BitmapImage(new Uri("Resources/cherry.jpg", UriKind.Relative));
+                        ImageBehavior.SetAnimatedSource(slot3, imageCherry);
+
+                        slotvar3 = 4;
                         break;
                     case 3:
                         slot3.Source = new BitmapImage(new Uri("Resources/bell.jpg", UriKind.Relative));
+                        ImageBehavior.SetAnimatedSource(slot3, imageBell);
+
+                        slotvar3 = 3;
                         break;
                     case 2:
                         slot3.Source = new BitmapImage(new Uri("Resources/AngyCantera.png", UriKind.Relative));
+                        ImageBehavior.SetAnimatedSource(slot3, imageCant);
+
+                        slotvar3 = 2;
                         break;
                     case 1:
                         slot3.Source = new BitmapImage(new Uri("Resources/7.jpg", UriKind.Relative));
+                        ImageBehavior.SetAnimatedSource(slot3, image7);
+
+                        slotvar3 = 1;
                         break;
 
                 }
-
                 if (firstSlot == secondSlot && firstSlot == thirdSlot)
                 {
                     switch (firstSlot) // add money on win
@@ -122,6 +194,12 @@ namespace CasinoApp_SCRUM
                     }
                     lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentMoney();
                 } 
+                else if (firstSlot != secondSlot || firstSlot != thirdSlot)
+                {
+                    feedbackLabel.Content = "You Lose";
+                    await Task.Delay(1500);
+                    feedbackLabel.Content = "Play Slots ($5)";
+                }
                 
             }
             else
