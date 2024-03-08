@@ -110,7 +110,24 @@
             <Button Background="Black" Foreground="white" Content="BLACK" FontSize="40" Grid.Row="2" Grid.Column="0" Click="Button_Click_1" Grid.RowSpan="2" Grid.ColumnSpan="3"></Button>
             <Button Background="Red" Foreground="white" Content="RED" FontSize="40" Grid.Row="2" Grid.Column="12" Click="Button_Click_1" Grid.RowSpan="2" Grid.ColumnSpan="3"></Button>
 
+            
         </Grid>
-        
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            
+            
+        </Grid>
+
     </Grid>
 </Window>
