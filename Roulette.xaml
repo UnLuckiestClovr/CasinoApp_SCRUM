@@ -150,6 +150,9 @@
                 <Image Source="/Resources/PokerChip_100.png"/>
             </Button>
 
+            <TextBlock Text="" Grid.Row="3" Grid.ColumnSpan="2" Margin="10" Background="CadetBlue"/>
+            <TextBlock Text="" Grid.Row="4" Grid.ColumnSpan="2" Margin="10" Background="CadetBlue"/>
+
         </Grid>
 
     </Grid>
