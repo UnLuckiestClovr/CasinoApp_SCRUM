@@ -150,7 +150,7 @@
                 <Image Source="/Resources/PokerChip_100.png"/>
             </Button>
 
-            <TextBlock x:Name="currentBetText" Text="Current Bet Amount : 0" Grid.Row="3" Grid.ColumnSpan="2" Margin="5,10,5,10" Padding="5" Background="CadetBlue" HorizontalAlignment="Center" MaxWidth="140" />
+            <TextBlock x:Name="currentBetText" Text="Current Bet Amount : 0" Grid.Row="3" Grid.ColumnSpan="2" Margin="5,10,5,10" Padding="5" Background="CadetBlue" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="140" />
             <Button Content="Reset Bet" Grid.Row="4" Grid.ColumnSpan="2" Margin="10" Background="CadetBlue" HorizontalAlignment="Center" Width="100" Click="Button_Click_2"/>
 
         </Grid>

@@ -98,7 +98,7 @@ namespace CasinoApp_SCRUM
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            rb.setBetAmount(0);
+            rb.resetBets();
             currentBetText.Text = $"Current Bet Amount : {rb.getBetAmount()}";
         }
     }
