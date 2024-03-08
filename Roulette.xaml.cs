@@ -37,9 +37,6 @@ namespace CasinoApp_SCRUM
         private void spinRouletteBTN_Click(object sender, RoutedEventArgs e)
         {
 
-
-
-
             int rolled = rb.spinWheel_Number();
             feedback.Content = "The wheel rolled a " + rolled;
             
@@ -106,7 +103,7 @@ namespace CasinoApp_SCRUM
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            rb.setBetAmount(0);
+            rb.resetBets();
             currentBetText.Text = $"Current Bet Amount : {rb.getBetAmount()}";
         }
     }
@@ -122,11 +119,6 @@ namespace CasinoApp_SCRUM
         public int spinWheel_Number()
         {
             return genFunctions.returnRandInt(0, 2); // -----------------
-        }
-
-        public string spinWheel_Color()
-        {
-            return colorArray[genFunctions.returnRandInt(0, 1)];
         }
 
         // Bet Logic ---------------------------------------
