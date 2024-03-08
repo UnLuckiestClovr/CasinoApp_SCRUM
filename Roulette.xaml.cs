@@ -37,9 +37,6 @@ namespace CasinoApp_SCRUM
         private void spinRouletteBTN_Click(object sender, RoutedEventArgs e)
         {
 
-
-
-
             int rolled = rb.spinWheel_Number();
             int winnings = rb.spinWheel(rolled);
             GlobalData.gUserInfo.addChips(winnings);
@@ -117,11 +114,6 @@ namespace CasinoApp_SCRUM
         public int spinWheel_Number()
         {
             return genFunctions.returnRandInt(0, 37);
-        }
-
-        public string spinWheel_Color()
-        {
-            return colorArray[genFunctions.returnRandInt(0, 1)];
         }
 
         // Bet Logic ---------------------------------------
