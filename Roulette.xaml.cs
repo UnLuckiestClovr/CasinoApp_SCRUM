@@ -62,11 +62,36 @@ namespace CasinoApp_SCRUM
             }
         }
 
-        private void betButtonClick(object sender, RoutedEventArgs e)
+        private void bet1Chip(object sender, RoutedEventArgs e)
         {
-            if (int.Parse((sender as Button).Content.ToString()) + rb.getBetNumber() < GlobalData.gUserInfo.getCurrentChips())
+            betButtonClick(1);
+        }
+        private void bet5Chips(object sender, RoutedEventArgs e)
+        {
+            betButtonClick(5);
+        }
+        private void bet10Chips(object sender, RoutedEventArgs e)
+        {
+            betButtonClick(10);
+        }
+        private void bet25Chips(object sender, RoutedEventArgs e)
+        {
+            betButtonClick(25);
+        }
+        private void bet50Chip(object sender, RoutedEventArgs e)
+        {
+            betButtonClick(50);
+        }
+        private void bet100Chip(object sender, RoutedEventArgs e)
+        {
+            betButtonClick(100);
+        }
+
+        private void betButtonClick(int betNum)
+        {
+            if (betNum + rb.getBetNumber() < GlobalData.gUserInfo.getCurrentChips())
             {
-                rb.setBetNumber(rb.getBetNumber() + int.Parse((sender as Button).Content.ToString()));
+                rb.setBetNumber(rb.getBetNumber() + betNum);
             }
         }
     }

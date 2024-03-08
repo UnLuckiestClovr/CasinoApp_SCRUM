@@ -126,27 +126,27 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <Button Margin="5" Background="Transparent" Click="betButtonClick">
+            <Button Margin="5" Background="Transparent" Click="bet1Chip">
                 <Image Source="/Resources/PokerChip_1.png"/>
             </Button>
 
-            <Button Margin="5" Background="Transparent" Grid.Column="1" Click="betButtonClick">
+            <Button Margin="5" Background="Transparent" Grid.Column="1" Click="bet5Chips">
                 <Image Source="/Resources/PokerChip_5.png"/>
             </Button>
 
-            <Button Margin="5" Background="Transparent" Grid.Row="1" Click="betButtonClick">
+            <Button Margin="5" Background="Transparent" Grid.Row="1" Click="bet10Chips">
                 <Image Source="/Resources/PokerChip_10.png"/>
             </Button>
 
-            <Button Margin="5" Background="Transparent" Grid.Row="1" Grid.Column="1" Click="betButtonClick">
+            <Button Margin="5" Background="Transparent" Grid.Row="1" Grid.Column="1" Click="bet25Chips">
                 <Image Source="/Resources/PokerChip_25.png"/>
             </Button>
 
-            <Button Margin="5" Background="Transparent" Grid.Row="2" Click="betButtonClick">
+            <Button Margin="5" Background="Transparent" Grid.Row="2" Click="bet50Chip">
                 <Image Source="/Resources/PokerChip_50.png"/>
             </Button>
 
-            <Button Margin="5" Background="Transparent" Grid.Row="2" Grid.Column="1" Click="betButtonClick">
+            <Button Margin="5" Background="Transparent" Grid.Row="2" Grid.Column="1" Click="bet100Chip">
                 <Image Source="/Resources/PokerChip_100.png"/>
             </Button>
 

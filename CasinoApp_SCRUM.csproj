@@ -13,6 +13,13 @@
     <None Remove="Resources\AngyCantera.png" />
     <None Remove="Resources\bell.jpg" />
     <None Remove="Resources\cherry.jpg" />
+    <None Remove="Resources\PokerChip_1.png" />
+    <None Remove="Resources\PokerChip_10.png" />
+    <None Remove="Resources\PokerChip_100.png" />
+    <None Remove="Resources\PokerChip_25.png" />
+    <None Remove="Resources\PokerChip_5.png" />
+    <None Remove="Resources\PokerChip_50.png" />
+    <None Remove="Resources\PokerChip_Blank.png" />
     <None Remove="Resources\rolling.gif" />
     <None Remove="Resources\roulette-table-png.png" />
     <None Remove="Resources\Slots2.jpg" />
@@ -27,6 +34,13 @@
     <Resource Include="Resources\AngyCantera.png" />
     <Resource Include="Resources\bell.jpg" />
     <Resource Include="Resources\cherry.jpg" />
+    <Resource Include="Resources\PokerChip_1.png" />
+    <Resource Include="Resources\PokerChip_10.png" />
+    <Resource Include="Resources\PokerChip_100.png" />
+    <Resource Include="Resources\PokerChip_25.png" />
+    <Resource Include="Resources\PokerChip_5.png" />
+    <Resource Include="Resources\PokerChip_50.png" />
+    <Resource Include="Resources\PokerChip_Blank.png" />
     <Resource Include="Resources\rolling.gif" />
     <Resource Include="Resources\roulette-table-png.png" />
     <Resource Include="Resources\Slots2.jpg" />
