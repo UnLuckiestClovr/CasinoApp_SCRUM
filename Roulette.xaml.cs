@@ -132,7 +132,7 @@ namespace CasinoApp_SCRUM
         {
             if (betAmount == 0) { return 0; }
 
-            int rolled = spinWheel_Number();
+            //int rolled = spinWheel_Number();
 
             if (betNumber == 0) 
             {
