@@ -184,7 +184,7 @@ namespace CasinoApp_SCRUM
             }
             else if (betNumber != -1 && betColor == null)
             {
-                if (betNumber.Equals(0))
+                if (betNumber.Equals(rolled))
                 {
                     return (int)(betAmount * 2);
                 }
