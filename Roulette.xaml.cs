@@ -91,10 +91,18 @@ namespace CasinoApp_SCRUM
 
         private void betButtonClick(int betNum)
         {
-            if (betNum + rb.getBetNumber() < GlobalData.gUserInfo.getCurrentChips())
+            if (betNum + rb.getBetAmount() <= GlobalData.gUserInfo.getCurrentChips())
             {
-                rb.setBetNumber(rb.getBetNumber() + betNum);
+                int betAmount = rb.getBetAmount() + betNum;
+                rb.setBetAmount(betAmount);
+                currentBetText.Text = $"Current Bet Amount : {betAmount}";
             }
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            rb.setBetAmount(0);
+            currentBetText.Text = $"Current Bet Amount : {rb.getBetAmount()}";
         }
     }
 
@@ -121,6 +129,13 @@ namespace CasinoApp_SCRUM
         private int betAmount = 0;
         private string betColor = null;
         private int betNumber = -1;
+
+        public void setBetAmount(int newAmount)
+        {
+            betAmount = newAmount;
+        }
+
+        public int getBetAmount() {  return betAmount; }
 
         public void resetBets()
         {
