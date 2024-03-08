@@ -24,6 +24,7 @@ namespace CasinoApp_SCRUM
         {
             this.Hide();
             GlobalData.gChipExchangeWindow.Show();
+            GlobalData.gChipExchangeWindow.chageValue(GlobalData.gUserInfo.getCurrentMoney(), GlobalData.gUserInfo.getCurrentChips());
         }
 
         public void slotBtnClick(object sender, RoutedEventArgs e) 
