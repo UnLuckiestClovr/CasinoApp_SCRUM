@@ -95,25 +95,25 @@ namespace CasinoApp_SCRUM
                 {
                     switch (firstSlot) // add money on win
                     {
-                        case 1:
+                        case 4:
                             // cherry
                             feedbackLabel.Content = "You Won $10";
                             GlobalData.gUserInfo.addMoney(10);
                             lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentMoney();
                             break;
-                        case 2:
+                        case 3:
                             // bell
                             feedbackLabel.Content = "You Won $20";
                             GlobalData.gUserInfo.addMoney(20);
                             lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentMoney();
                             break;
-                        case 3:
+                        case 2:
                             // cantera
                             feedbackLabel.Content = "You Won $40";
                             GlobalData.gUserInfo.addMoney(40);
                             lblMoney.Content = "Money: " + GlobalData.gUserInfo.getCurrentMoney();
                             break;
-                        case 4:
+                        case 1:
                             // 7
                             feedbackLabel.Content = "You Won $100";
                             GlobalData.gUserInfo.addMoney(100);
