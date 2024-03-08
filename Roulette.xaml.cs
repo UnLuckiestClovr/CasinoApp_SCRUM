@@ -47,7 +47,9 @@ namespace CasinoApp_SCRUM
             rb.resetBets();
             chipLabel.Content = (GlobalData.gUserInfo.getCurrentChips() + "");
 
-            
+            currentBetText.Text = $"Current Bet Amount : {rb.getBetAmount()}";
+
+
 
         }
 
@@ -118,7 +120,7 @@ namespace CasinoApp_SCRUM
         
         public int spinWheel_Number()
         {
-            return genFunctions.returnRandInt(0, 2); // -----------------
+            return genFunctions.returnRandInt(0, 37); // -----------------
         }
 
         // Bet Logic ---------------------------------------
