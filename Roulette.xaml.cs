@@ -38,11 +38,16 @@ namespace CasinoApp_SCRUM
         {
 
             int rolled = rb.spinWheel_Number();
+            feedback.Content = "The wheel rolled a " + rolled;
+            
             int winnings = rb.spinWheel(rolled);
+            GlobalData.gUserInfo.subtractChips(rb.getBetAmount());
             GlobalData.gUserInfo.addChips(winnings);
 
             rb.resetBets();
             chipLabel.Content = (GlobalData.gUserInfo.getCurrentChips() + "");
+
+            
 
         }
 
@@ -113,7 +118,7 @@ namespace CasinoApp_SCRUM
         
         public int spinWheel_Number()
         {
-            return genFunctions.returnRandInt(0, 37);
+            return genFunctions.returnRandInt(0, 2); // -----------------
         }
 
         // Bet Logic ---------------------------------------
@@ -162,6 +167,32 @@ namespace CasinoApp_SCRUM
 
         public int spinWheel(int rolled)
         {
+            int rolleddiv5 = rolled / 5;
+            string color = "BLACK";
+            switch (rolleddiv5)
+            {
+                case 0:
+                    color = "RED";
+                    break;
+                case 2:
+                    color = "RED";
+                    break;
+                case 4:
+                    color = "RED";
+                    break;
+                case 6:
+                    color = "RED";
+                    break;
+                case 8:
+                    color = "RED";
+                    break;
+                case 10:
+                    color = "RED";
+                    break;
+            }
+
+
+
             if (betAmount == 0) { return 0; }
 
             //int rolled = spinWheel_Number();
@@ -176,7 +207,7 @@ namespace CasinoApp_SCRUM
             }
             else if (betNumber == -1 && betColor != null)
             {
-                if (betColor.Equals(rolled))
+                if (betColor.Equals(color))
                 {
                     return (int)(betAmount * 1.5);
                 }
