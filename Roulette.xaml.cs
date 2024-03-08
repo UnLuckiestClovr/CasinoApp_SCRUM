@@ -36,11 +36,13 @@ namespace CasinoApp_SCRUM
 
         private void spinRouletteBTN_Click(object sender, RoutedEventArgs e)
         {
-            int winnings = rb.spinWheel();
 
+
+
+
+            int rolled = rb.spinWheel_Number();
+            int winnings = rb.spinWheel(rolled);
             GlobalData.gUserInfo.addChips(winnings);
-
-            feedback.Content = "It rolled a " + rb.spinWheel();
 
             rb.resetBets();
             chipLabel.Content = (GlobalData.gUserInfo.getCurrentChips() + "");
@@ -126,7 +128,7 @@ namespace CasinoApp_SCRUM
             this.betColor = color;
         }
 
-        public int spinWheel()
+        public int spinWheel(int rolled)
         {
             if (betAmount == 0) { return 0; }
 
@@ -138,7 +140,7 @@ namespace CasinoApp_SCRUM
                 {
                     return (int)(betAmount * 3);
                 }
-                else return rolled;
+                else return 0;
             }
             else if (betNumber == -1 && betColor != null)
             {
@@ -146,17 +148,17 @@ namespace CasinoApp_SCRUM
                 {
                     return (int)(betAmount * 1.5);
                 }
-                else return rolled;
+                else return 0;
             }
             else if (betNumber != -1 && betColor == null)
             {
-                if (betNumber.Equals(rolled))
+                if (betNumber.Equals(0))
                 {
                     return (int)(betAmount * 2);
                 }
-                else return rolled;
+                else return 0;
             }
-            else { return rolled; }
+            else { return 0; }
 
         }
     }
