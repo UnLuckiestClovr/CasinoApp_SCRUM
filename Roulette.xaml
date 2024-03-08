@@ -125,8 +125,31 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            
-            
+
+            <Button Margin="5" Background="Transparent">
+                <Image Source="/Resources/PokerChip_1.png"/>
+            </Button>
+
+            <Button Margin="5" Background="Transparent" Grid.Column="1">
+                <Image Source="/Resources/PokerChip_5.png"/>
+            </Button>
+
+            <Button Margin="5" Background="Transparent" Grid.Row="1">
+                <Image Source="/Resources/PokerChip_10.png"/>
+            </Button>
+
+            <Button Margin="5" Background="Transparent" Grid.Row="1" Grid.Column="1">
+                <Image Source="/Resources/PokerChip_25.png"/>
+            </Button>
+
+            <Button Margin="5" Background="Transparent" Grid.Row="2">
+                <Image Source="/Resources/PokerChip_50.png"/>
+            </Button>
+
+            <Button Margin="5" Background="Transparent" Grid.Row="2" Grid.Column="1">
+                <Image Source="/Resources/PokerChip_100.png"/>
+            </Button>
+
         </Grid>
 
     </Grid>
